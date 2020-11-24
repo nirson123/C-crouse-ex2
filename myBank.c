@@ -40,7 +40,7 @@ void balance(int acuunt_number) {
 	}
 	//print the balance
 	else {
-		printf("%lf\n", bank[0][acuunt_number - 900 - 1]);
+		printf("%.2lf\n", bank[0][acuunt_number - 900 - 1]);
 	}
 }
 
@@ -61,7 +61,7 @@ void deposite(int acuunt_number, double amount) {
 	//if everything is valid, deposite
 	else {
 		bank[0][acuunt_number - 900 - 1] += amount;
-		printf("%lf\n", bank[0][acuunt_number - 900 - 1]);
+		printf("%.2lf\n", bank[0][acuunt_number - 900 - 1]);
 	}
 }
 
@@ -86,7 +86,7 @@ void withdraw(int acuunt_number, double amount) {
 	//if everything is valid, withdraw from the acuunt
 	else {
 		bank[0][acuunt_number - 900 - 1] -= amount;
-		printf("%lf\n", bank[0][acuunt_number - 900 - 1]);
+		printf("%.2lf\n", bank[0][acuunt_number - 900 - 1]);
 	}
 
 }
@@ -129,7 +129,7 @@ void print() {
 	int i;
 	for (i = 0; i < 50; i++) {	//go through the acuunts
 		if (bank[1][i] != 0) {	//if the acuunt is open, print it
-			printf("acuunt number : %d balance : %lf \n" , (i + 900 + 1) , bank[0][i]);
+			printf("acuunt number : %d balance : %.2lf \n" , (i + 900 + 1) , bank[0][i]);
 		}
 	}
 }
